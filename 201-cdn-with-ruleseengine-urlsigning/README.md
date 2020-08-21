@@ -20,4 +20,4 @@ Before using the template, make sure to do the following:
 1. Create a key vault in the same subscription or in a different subscription.
 2. Define two secrets and set up secret values manually (at least 32 size)
 3. References the two secrets in urlSigningKeys of the template (change subscriptionId, resourceGroupName, vaultName, secretName, secretVersion)
-4. Make sure the keyvault is given "Get Permissions for Secret" access to "Microsoft.Azure.CDN" Principal.
+4. Make sure the keyvault is given "Get Permissions for Secret" access to "Microsoft.Azure.CDN" Principal. If the principal (SP) is not available, add it explicitly using New-AzADServicePrincipal -ApplicationId "205478c0-bd83-4e1b-a9d6-db63a3e1e1c8"
